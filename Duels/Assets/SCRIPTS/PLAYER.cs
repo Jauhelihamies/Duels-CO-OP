@@ -1,32 +1,57 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class PLAYER : MonoBehaviour
 {
-    private float movementX;
-    private float movementY;
-    private Rigidbody rb;
-    public float speed = 0;
+    [Header("Movement Settings")]
+    public float moveSpeed = 5.0f;
+    public float mouseSensitivity = 0.1f;
+    public Transform cameraTransform;
 
+    private CharacterController controller;
+    private Vector2 moveInput;
+    private Vector2 lookInput;
+    private float xRotation = 0f;
 
-
-    void Start()
+    void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    public void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
     }
 
-
-    void OnMove(InputValue movementValue)
+    public void OnLook(InputValue value)
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-        movementX = movementVector.x;
-        movementY = movementVector.y;
+        lookInput = value.Get<Vector2>();
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement * speed);
+        HandleRotation();
+        HandleMovement();
     }
 
+    private void HandleRotation()
+    {
+        float mouseX = lookInput.x * mouseSensitivity;
+        float mouseY = lookInput.y * mouseSensitivity;
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
+
+        transform.Rotate(Vector3.up * mouseX);
+    }
+
+    private void HandleMovement()
+    {
+
+        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        controller.Move(move * moveSpeed * Time.deltaTime);
+    }
 }

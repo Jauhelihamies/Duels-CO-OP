@@ -14,23 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Multiplayer.Center.Editor::Unity.Multiplayer.Center.Questionnaire.UserChoicesObject
   QuestionnaireVersion: 1.3
   UserAnswers:
-    Answers:
-    - QuestionId: Pace
-      Answers:
-      - Fast
-    - QuestionId: Cheating
-      Answers:
-      - CheatingImportant
-    - QuestionId: CostSensitivity
-      Answers:
-      - NoCost
-    - QuestionId: NetcodeArchitecture
-      Answers:
-      - ClientServer
-    - QuestionId: PlayerCount
-      Answers:
-      - 2
-  Preset: 2
+    Answers: []
+  Preset: 0
   SelectedSolutions:
     SelectedHostingModel: 1
     SelectedNetcodeSolution: 2

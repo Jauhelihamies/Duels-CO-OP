@@ -57,4 +57,14 @@ public class PLAYER : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("bullet"))
+        {
+            Debug.Log("Osuma pelaajaan!");
+
+            Destroy(other.gameObject); // Tuhoa ammus osumasta
+        }
+    }
+
 }

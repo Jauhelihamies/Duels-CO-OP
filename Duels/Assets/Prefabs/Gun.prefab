@@ -146,7 +146,7 @@ MonoBehaviour:
   - {fileID: 7921987894817389966}
   - {fileID: 2196288079865066131}
   bulletPrefab: {fileID: 0}
-  bulletSpeed: 20
+  bulletSpeed: 60
   minWaitTime: 1.5
   maxWaitTime: 4
 --- !u!1 &6205148841442355560

@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5548319664729906177}
   - component: {fileID: 1349674795673350978}
+  - component: {fileID: -5310962758442285305}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -146,9 +147,24 @@ MonoBehaviour:
   - {fileID: 7921987894817389966}
   - {fileID: 2196288079865066131}
   bulletPrefab: {fileID: 0}
-  bulletSpeed: 60
+  bulletSpeed: 29
   minWaitTime: 1.5
   maxWaitTime: 4
+--- !u!114 &-5310962758442285305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002793666738210002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bc7b8d40df6ec45af459528b1f34c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponLookAtPlayer
+  playerTag: Player
+  rotationSpeed: 5
+  lockVertical: 0
 --- !u!1 &6205148841442355560
 GameObject:
   m_ObjectHideFlags: 0

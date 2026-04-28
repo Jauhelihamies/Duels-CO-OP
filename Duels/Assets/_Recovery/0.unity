@@ -560,6 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PLAYER
   moveSpeed: 5
   mouseSensitivity: 0.1
+  gravity: -9.81
   cameraTransform: {fileID: 1390331949}
 --- !u!136 &2094994698
 CapsuleCollider:

@@ -47,7 +47,7 @@ public class PLAYER : MonoBehaviour
         playerHealth -= 20;
         if (playerHealth <= 0)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
 
     }
@@ -75,7 +75,7 @@ public class PLAYER : MonoBehaviour
             Destroy(other.gameObject);
             if (playerHealth <= 0)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(2);
             }
 
         }

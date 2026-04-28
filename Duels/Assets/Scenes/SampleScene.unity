@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4758656910849107870, guid: 2799bc0e32acf054cb99b817272a9e06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.005000085
+      value: 2.631
       objectReference: {fileID: 0}
     - target: {fileID: 4758656910849107870, guid: 2799bc0e32acf054cb99b817272a9e06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -368,6 +368,119 @@ MonoBehaviour:
   throwRange: 12
   throwForceUp: 6
   throwForceForward: 12
+--- !u!1 &740803026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740803030}
+  - component: {fileID: 740803029}
+  - component: {fileID: 740803028}
+  - component: {fileID: 740803027}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &740803027
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740803026}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &740803028
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740803026}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ce6f99406c070b544b8ff03d15742f70, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &740803029
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740803026}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &740803030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740803026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.7903, y: 6.28118, z: -10.394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,11 +534,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7088932076918874427, guid: 2799bc0e32acf054cb99b817272a9e06, type: 3}
   m_PrefabInstance: {fileID: 92795104}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1049908457 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3256169663401594547, guid: 5782f94e85a8032419bd42e9d9e47c79, type: 3}
-  m_PrefabInstance: {fileID: 1862850355}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1348319073
 GameObject:
@@ -5413,12 +5521,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bde1fcc20e893046a21808a6b25c5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExplosiveDynamite
-  fuseTime: 3
+  dynamitePrefab: {fileID: 0}
+  throwPoint: {fileID: 0}
+  particleEffectPrefab: {fileID: 0}
+  throwForce: 20
+  upwardArc: 5
+  throwInterval: 3
   explosionRadius: 5
-  explosionForce: 700
-  particlePrefab: {fileID: 1049908457}
-  visualObjectPrefab: {fileID: 0}
-  visualDuration: 0.5
+  damageAmount: 20
+  fuseTime: 3
 --- !u!1001 &1673197188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5677,3 +5788,4 @@ SceneRoots:
   - {fileID: 1348319076}
   - {fileID: 1862850355}
   - {fileID: 92795104}
+  - {fileID: 740803030}

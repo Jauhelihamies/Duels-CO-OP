@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PLAYER : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PLAYER : MonoBehaviour
     private Vector2 lookInput;
     private Vector3 velocity; // Tänne tallennetaan putoamisnopeus
     private float xRotation = 0f;
+    private int playerHealth = 100;
 
     void Awake()
     {
@@ -40,7 +42,15 @@ public class PLAYER : MonoBehaviour
         cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
+    public void DynamiteHit()
+    {
+        playerHealth -= 20;
+        if (playerHealth <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
 
+    }
     private void HandleMovement()
     {
         // 1. Maanpinnan tarkistus (nollataan putoamisnopeus kun ollaan maassa)
@@ -61,10 +71,15 @@ public class PLAYER : MonoBehaviour
     {
         if (other.CompareTag("bullet"))
         {
-            Debug.Log("Osuma pelaajaan!");
+            playerHealth -= 10;
+            Destroy(other.gameObject);
+            if (playerHealth <= 0)
+            {
+                SceneManager.LoadScene(3);
+            }
 
-            Destroy(other.gameObject); // Tuhoa ammus osumasta
         }
+
     }
 
 }

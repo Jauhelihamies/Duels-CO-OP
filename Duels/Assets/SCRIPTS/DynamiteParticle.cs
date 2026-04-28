@@ -98,7 +98,7 @@ public class DynamiteEnemy : MonoBehaviour
             {
                 if (hit.CompareTag("Player"))
                 {
-                    hit.SendMessage("TakeDamage", damageAmount, SendMessageOptions.DontRequireReceiver);
+                    GameObject.Find("Player").GetComponent<PLAYER>().DynamiteHit();
                 }
             }
 

@@ -81,5 +81,12 @@ public class PLAYER : MonoBehaviour
         }
 
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("GOAL"))
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
 
 }

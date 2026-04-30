@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackUp
   GetBackToWork: THE_GAME
-  TargetTime: 10
+  TargetTime: 20
 --- !u!1 &1155336075
 GameObject:
   m_ObjectHideFlags: 0
